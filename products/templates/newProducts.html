@@ -1,0 +1,20 @@
+{% extends 'base.html'%}
+
+{% block content%}
+    <h1>Latest LookBook</h1>
+    <div class="row center" >
+        {% for new in new %}
+            <div class="col mt-2 mb-2">
+                <div class="card" style="width: 18rem; align-items: center;">
+                    <img src="{{new.image_url}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title"> {{new.name}} </h5>
+                    <p class="card-text"> ${{new.price}} </p>
+                    <p class="card-text"> Complimentary Shipping </p>
+                    <a href="#" class="btn btn-dark">Add To Shopping Bag</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
